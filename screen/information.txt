@@ -1,0 +1,5 @@
+Les captures d'ecran ci-dessous permettent d'expliquer l'organisation du projet avec la contribution de chacun, le squelette du projet, les Tag, Branches, ect
+Pour avoir du code précis je vous invite a consulter le fichier cli.rs (le seul que j'ai fais de moi même), les autres fichiers je me suis aidé des autres ou j'ai aidé une personne a faire son fichier.
+La version complete du code peut vous être envoyé par mail, si elle ne fait pas l'objet d'une réutilisation à but commercial.
+
+Contactez moi si besoin : amezouer@gmail.com
