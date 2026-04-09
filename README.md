@@ -1,53 +1,49 @@
-# Analyse-Rust-Depot-Git
+# 🦀 Git Repository Analyzer — Rust CLI
 
-## Objectif
-L’objectif de ce projet est d’analyser automatiquement un ensemble de dépôts Git à partir d’un répertoire donné, afin d’en extraire des statistiques pertinentes :
-- nombre de commits
-- intervalles de temps entre les commits
-- volume moyen de modifications par commit
-- répartition des contributions par utilisateur
+A command-line tool written in **Rust** that analyzes Git repositories and generates statistics: commit history, author contributions, file change tracking, and output to CSV/JSON.
 
-Ces métriques permettent d’obtenir une vision quantitative de l’activité et de l’organisation d’un projet Git.
+> Academic project — Systems Programming module, L3 Computer Science @ UVSQ (group project)
 
-## Outils et technologies
-- **Rust**
-- **Cargo**
-- **CLI (CLI.rs)** pour le parsing des arguments
-- **Librairie git2** pour l’analyse des dépôts Git
-- Fichiers CSV pour l’entrée et la sortie des données
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Les commandes utilisées incluent notamment :
-- `cargo build`
-- `cargo run`
-- `cargo clippy`
-- `cargo doc --open`
-- `cargo test`
-- `git shortlog -sn --all`
+---
 
-## Fonctionnement général
-- Chaque dépôt est parcouru automatiquement et analysé
-- Les statistiques sont calculées et agrégées
-- Les résultats sont exportés dans des fichiers exploitables (csv, json)
+## Features
 
-## Contexte académique
-Ce projet a été réalisé dans le cadre d’un **travail académique en groupe de 5 personnes**, sur une durée de plus d’un mois.
+- Scans a local directory for Git repositories
+- Extracts commit metadata: author, date, message, files changed
+- Generates per-author statistics (commit count, lines added/removed)
+- Outputs results to CSV and JSON formats
+- Handles multiple repositories in a single scan
 
-Le dépôt original a été géré via **GitHub Classroom** et est **privé**.  
-Par conséquent, ce dépôt est une **vitrine** présentant :
-- le contexte du projet
-- ses objectifs techniques
-- son architecture
-- mes contributions personnelles
+## Tech stack
 
-## Ce que ce projet démontre
-- Maîtrise des bases de **Rust**
-- Manipulation de dépôts Git de manière programmatique
-- Conception d’un outil d’analyse automatisé
-- Travail en équipe avec Git (branches, commits, push)
+| Component | Technology |
+|-----------|-----------|
+| Language | Rust |
+| Git interaction | libgit2 / git2-rs crate |
+| Output formats | CSV, JSON |
+| Build system | Cargo |
 
-## Limites et pistes d’amélioration
-- Pas d’interface graphique (outil en ligne de commande uniquement)
-- Analyse limitée à certaines métriques
+## Getting started
 
-## Contributions personnelles
-Voir le fichier **CONTRIBUTIONS.md** pour le détail de mes interventions.
+```bash
+git clone https://github.com/AmZzPYJS/Analyse-Rust-Depot-Git.git
+cd Analyse-Rust-Depot-Git
+cargo build --release
+cargo run -- /path/to/directory
+```
+
+## What I learned
+
+- Writing idiomatic Rust: ownership, borrowing, lifetimes, error handling with `Result`
+- Using Rust crates (git2, serde, csv) and managing dependencies with Cargo
+- Parsing and processing Git objects programmatically
+- Collaborating on a shared codebase with Git (branching, merging, pull requests)
+- Structuring a Rust project with modules and clean separation of concerns
+
+## License
+
+MIT
